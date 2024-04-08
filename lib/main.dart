@@ -70,7 +70,7 @@ class homescreen extends State<home> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 600,left: 106),
+              padding: const EdgeInsets.only(top: 700,left: 110),
               child: ElevatedButton(
                   onPressed: (){
                     Navigator.push(
@@ -90,7 +90,7 @@ class homescreen extends State<home> {
                     ),
                     elevation: MaterialStateProperty.all<double>(15.0), // Élévation du bouton
                   ),
-                  child: Text('Sign In',
+                  child: Text('Sign Up',
                     style: TextStyle(
                       fontSize: 30,
                       color: Colors.black,
@@ -100,7 +100,7 @@ class homescreen extends State<home> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 700,left: 110),
+              padding: const EdgeInsets.only(top: 600,left: 106),
               child: ElevatedButton(
                   onPressed: (){
 
@@ -111,7 +111,7 @@ class homescreen extends State<home> {
                   },
                   style: ButtonStyle(
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                      EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                      EdgeInsets.symmetric(horizontal: 66, vertical: 10),
                     ),
                     backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).primaryColorLight),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(

@@ -31,7 +31,6 @@ class forgetscreen extends State<forget> {
   String email = '';
   bool visible = true;
   bool code = true;
-  bool loadin = false;
 
   void dispose() {
     emailController.dispose();
@@ -76,11 +75,7 @@ class forgetscreen extends State<forget> {
   @override
   Widget build(BuildContext context) {
 
-    return loadin? loading() : StreamProvider<Usere?>.value(
-      initialData: null,
-      value: AuthService().user,
-
-      child: Scaffold(
+    return Scaffold(
         resizeToAvoidBottomInset: true,
         body: Stack(
           children: [
@@ -111,7 +106,6 @@ class forgetscreen extends State<forget> {
               padding: const EdgeInsets.only(top: 50,left: 340),
               child: IconButton(
                 onPressed: (){
-                  setState(() { loadin = true; });
                   Navigator.push(context,
                       MaterialPageRoute(
                           builder: (context) => home()));
@@ -173,7 +167,6 @@ class forgetscreen extends State<forget> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
